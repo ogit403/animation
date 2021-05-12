@@ -1,0 +1,883 @@
+html, body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.795);
+    transition: all 0.4s;
+    z-index: 100000;
+}
+
+.header .wrapper-header {
+    position: relative;
+}
+
+.header #group-header {
+    list-style: none;
+    display: flex;
+    position: relative;
+    /* top: 0; */
+    margin-top: 16px;
+    left: 50%;
+    transform: translateX(-20%);
+}
+
+.header #group-header li {
+    margin-left: 40px;
+}
+
+.header #group-header li a {
+    position: relative;
+    font-size: 16px;
+    padding: 5px 12px;
+    text-decoration: none;
+    border-radius: 40px;
+    background-color: #fff;
+    color: #000;
+    transition: all 0.3s;
+}
+
+.header #group-header li a:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 12px;
+    height: 12px;
+    border: 3px solid #094b65;
+    border-width: 3px 3px 0 0;
+    color: #094b65;
+    z-index: 10;
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+.header #group-header li a:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 12px;
+    height: 12px;
+    border: 3px solid #094b65;
+    border-width: 0 0 3px 3px;
+    color: #094b65;
+    z-index: 10;
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+.header #group-header li a.active, 
+.header #group-header li a:hover {
+    background-color: #094b65;
+    color: #fff;
+}
+
+.header #group-header li a:hover:before {
+    opacity: 1;
+    top: -6px;
+    right: -6px;
+}
+.header #group-header li a:hover:after {
+    opacity: 1;
+    bottom: -6px;
+    left: -6px;
+}
+
+.header #group-header li a.active:before,
+.header #group-header li a.active:after {
+    opacity: 0;
+}
+
+
+/*                                    Carousel                                    */
+.carousel-list {
+    /* margin-top: 200px; */
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    /* height: 100%; */
+}
+
+.carousel-list #text {
+    position: absolute;
+    /* top: 0px; */
+    color: #094b65;
+    font-family: 'Rancho', cursive;
+    text-align: center;
+    font-size: 9vw;
+    line-height: 0.55em;
+}
+
+.carousel-list #text span {
+    font-size: 0.20em;
+    font-weight: 400;
+    letter-spacing: 2px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.carousel-list img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    object-fit: cover;
+}
+
+.carousel-list:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to top, #094b65, transparent);
+    z-index: 100;
+}
+
+/*                    Slider                           */
+.slider-list .carousel-item {
+    height: 100vh;
+}
+
+.slider-list .img-box {
+    width: 550px;
+    position: relative;
+}
+
+.pic-one {
+    width: 100%;
+    animation: AniPic1 2.5s;
+}
+
+.pic-2 {
+    width: 100px;
+    position: absolute;
+    left: 15px;
+    bottom: 20px;
+    animation: AniPic2 3.5s;
+}
+
+@keyframes AniPic2 {
+    0% {left: -150px; opacity: 0;}
+    75% {left: -150px; opacity: 0;}
+    100% {left: 15px; opacity: 1;}
+}
+
+.pic-3 {
+    width: 75px;
+    position: absolute;
+    left: 150px;
+    bottom: 70px;
+    animation: AniPic3 3s;
+}
+
+@keyframes AniPic3 {
+    0% {bottom: -100px; opacity: 0}
+    66% {bottom: -100px; opacity: 0;}
+    100% {bottom: 70px; opacity: 1;}
+}
+
+.pic-4 {
+    width: 160px;
+    position: absolute;
+    right: 40px;
+    top: 110px;
+    animation: AniPic4 3s;
+}
+
+@keyframes AniPic4 {
+    0% {top: -50px; opacity: 0;}
+    66% {top: -50px; opacity: 0;}
+    100% {top: 110px; opacity: 1;}
+}
+
+.pic-5 {
+    width: 110px;
+    position: absolute;
+    right: 20px;
+    bottom: 0;
+    animation: AniPic5 3.5s;
+}
+
+@keyframes AniPic5 {
+    0% {right: 150px; opacity: 0;}
+    70% {right: 150px; opacity: 0;}
+    100% {right: 20px; opacity: 1;}
+}
+
+.pic-6 {
+    width: 160px;
+    position: absolute;
+    right: 160px;
+    bottom: 35px;
+    animation: AniPic6 5s;
+}   
+
+@keyframes AniPic6 {
+    0% {transform: rotate(-45deg); opacity: 0;}
+    80% {transform: rotate(-45deg); opacity: 0;}
+    100% {transform: rotate(0deg); opacity: 1;}
+}
+
+.slide-one {
+    background-color: #b0c6f5;
+}
+
+.slider-list .row {
+    margin: 12% 0;
+}
+
+.carousel-item h1 {
+    margin-top: 40px;
+    font-weight: bold;
+    color: #fff;
+    animation-name: AniTitle;
+    animation-duration: 2.5s;
+}
+
+.carousel-item p {
+    margin: 30px 0 50px;
+    font-size: 16px;
+    color: #fff;
+    animation: AniText 4s;
+}
+
+.carousel-item button {
+    padding: 8px 20px;
+    background-color: #0c5ce3;
+    border: 0;
+    outline: none;
+    border-radius: 20px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    animation: AniButton 5s;
+}
+
+.slide-two {
+    background: #f7f7f7;
+}
+
+.slide-two h1, .slide-two p {
+    color: #feb154;
+}
+
+.slide-two button {
+    background: linear-gradient(to right, #feb154, #ffd255);
+}
+
+.img-one {
+    width: 100%;
+    animation: AniPic1 2.5s;
+}
+
+.img-2 {
+    width: 200px;
+    position: absolute;
+    left: 0;
+    bottom: 20px;
+    animation: AniImg2 4s;
+}
+@keyframes AniImg2 {
+    0% {
+        left: 200px;
+        opacity: 0;
+    }
+    80% {
+        left: 200px;
+        opacity: 0;
+    }
+    100% {
+        left: 0px;
+        opacity: 1;
+    }
+}
+
+.img-3 {
+    width: 70px;
+    position: absolute;
+    left: 245px;
+    bottom: 55px;
+    animation: AniImg3 3s;
+}
+@keyframes AniImg3 {
+    0% {
+        bottom: 200px;
+        opacity: 0;
+    }
+    66% {
+        bottom: 200px;
+        opacity: 0;
+    }
+    100% {
+        bottom: 55px;
+        opacity: 1;
+    }
+}
+
+.img-4 {
+    width: 60px;
+    position: absolute;
+    left: 335px;
+    bottom: 95px;
+    animation: AniImg4 3s;
+}
+@keyframes AniImg4 {
+    0% {
+        bottom: 200px;
+        opacity: 0;
+    }
+    66% {
+        bottom: 200px;
+        opacity: 0;
+    }
+    100% {
+        bottom: 95px;
+        opacity: 1;
+    }
+}
+
+.img-5 {
+    width: 100px;
+    position: absolute;
+    right: 50px;
+    bottom: 20px;
+    animation: AniImg5 5s;
+}
+@keyframes AniImg5 {
+    0% {
+        right: 200px;
+        opacity: 0;
+    }
+    80% {
+        right: 200px;
+        opacity: 0;
+    }
+    100% {
+        right: 50px;
+        opacity: 1;
+    }
+}
+
+@keyframes AniTitle {
+    from {transform: translateY(-60px);}
+    to {transform: translateY(0);}
+}
+
+@keyframes AniPic1 {
+    from {transform: scale(0.5);}
+    to {transform: scale(1);}
+}
+
+@keyframes AniText {
+    0% {transform: translateX(600px); opacity: 0;}
+    50%  {transform: translateX(600px); opacity: 0;}
+    100% {transform: translateX(0); opacity: 1;}
+}
+
+@keyframes AniButton {
+    0% {
+        opacity: 0;
+        transform: rotate(65deg);
+    }
+    80% {
+        opacity: 0;
+        transform: rotate(65deg);
+    }
+    100% {
+        opacity: 1;
+        transform: rotate(0deg);
+    }
+}
+
+
+/*                          group ani                      */
+.group-ani {
+    position: relative;
+    width: 100%;
+    /* height: 1100px; */
+}
+
+#canvas1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+}
+
+
+.bubble1 {
+    position: absolute;
+    left: 3%;
+    top: 50px;
+    width: 250px;
+    height: 250px;
+    border-radius: 54% 46% 42% 58% / 60% 58% 42% 40%;
+    background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #a8eb12);
+    /* background-image: linear-gradient(to right top, red, blue, yellow, #a8eb12); */
+    animation: wave 5s linear infinite;
+}
+
+.count-time {
+    position: absolute;
+    width: 500px;
+    left: 50%;
+    top: 100px;
+    
+    transform: translateX(-50%);
+}
+
+.countdown {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    font-size: 12px;
+   
+}
+
+.day, .hour, .minute, .second {
+    font-size: 30px;
+}
+
+.text {
+    text-align: center;
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.bubble {
+    position: absolute;
+    right: 10%;
+    top: 50px;
+    width: 250px;
+    height: 250px;
+    border-radius: 54% 46% 42% 58% / 60% 58% 42% 40%;
+    background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #a8eb12);
+    animation: wave 5s linear infinite;
+}
+
+@keyframes wave {
+    0% {
+        top: 50px; right: 10%;
+    }
+    20% {
+        top: 60px; right: 8%;
+        border-radius: 45% 55% 62% 38% / 53% 51% 49% 47%;
+    }
+    40% {
+        top: 100px; right: 7%;
+        border-radius: 45% 55% 49% 51% / 36% 51% 49% 64%;
+    }
+    60% {
+        top: 150px; right: 8%;
+        border-radius: 60% 40% 57% 43% / 47% 62% 38% 53%;
+    }
+    80% {
+        top: 100px; right: 9%;
+        border-radius: 60% 40% 32% 68% / 38% 36% 64% 62%;
+    }
+    100% {
+        top: 50px;
+        right: 10%;
+    }
+}
+
+.list-video {
+    position: relative;
+    margin: auto;
+    width: 80%;
+    padding-top: 400px;
+}
+
+.box-video {
+    display: inline-block;
+    width: 500px;
+    height: 280px;
+    filter: grayscale(1);
+}
+.box-video:hover {
+    filter: grayscale(0);
+}
+
+.box-video video {
+    width: 100%;
+    height: 100%;
+}
+
+/*                                  group footer */
+
+.group-footer {
+    position: relative;
+    background-color: #000;
+    overflow: hidden;
+    display: flex;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    justify-content: space-around;
+}
+.box-video-1 {
+    position: relative;
+    width: 500px;
+    height: 500px;
+}
+
+.box-video-1 video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    mix-blend-mode: screen;
+}
+
+.box-video-1 video:nth-child(2) {
+    mix-blend-mode: screen;
+    filter: brightness(2);
+}
+
+/*                                            */
+
+
+.time {
+    display: flex;
+    color: #fff;
+    font-size: 30px;
+    justify-content: center;
+}
+
+#textInner span {
+    position: relative;
+    display: inline-block;
+    animation: AniText1 2s ease-in-out infinite;
+}
+
+@keyframes AniText1 {
+    0% {transform: translateY(0px);}
+    25% {transform: translateY(-30px);}
+    50%, 100% {transform: translateY(0px);}
+}
+
+
+.form-3 {
+    width: 100%;
+    height: 200px;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: #161623;
+}
+
+.form-3 .icon {
+    width: 100px;
+}
+
+.form-3 .icon path {
+    fill: transparent;
+    stroke-width: 10;
+    stroke: #31e8ff;
+}
+
+.form-3 .icon.star1 path {
+    stroke-dasharray: 1800;
+    stroke-dashoffset: 0;
+}
+
+.form-3 .icon.star1:hover path {
+    animation: AniStar1 2s linear forwards;
+}
+
+@keyframes AniStar1 {
+    0% {
+        stroke-dashoffset: 0;
+    }
+    40% {
+        stroke-dashoffset: 1800;
+    }
+    80% {
+        stroke-dashoffset: 3600;
+        fill: transparent;
+    }
+    100% {
+        stroke-dashoffset: 3600;
+        fill: #31e8ff;
+    }
+}
+
+.form-3 .icon.heart path {
+    stroke-dasharray: 1800;
+    stroke-dashoffset: 0;
+}
+
+.form-3 .icon.heart:hover path {
+    animation: AniHeart 2s linear forwards;
+}
+
+@keyframes AniHeart {
+    0% {
+        stroke-dashoffset: 0;
+    }
+    40% {
+        stroke-dashoffset: 900;
+    }
+    80% {
+        stroke-dashoffset: 1800;
+        fill: transparent;
+    }
+    100% {
+        stroke-dashoffset: 1800;
+        fill: #31e8ff;
+    }
+}
+
+.form-3 .icon.square path {
+    stroke-dasharray: 2000;
+    stroke-dashoffset: 0;
+}
+
+.form-3 .icon.square:hover path {
+    animation: AniSquare 2s linear forwards;
+}
+
+@keyframes AniSquare {
+    0% {
+        stroke-dashoffset: 0;
+    }
+    40% {
+        stroke-dashoffset: 2000;
+    }
+    80% {
+        stroke-dashoffset: 4000;
+        fill: transparent;
+    }
+    100% {
+        stroke-dashoffset: 4000;
+        fill: #31e8ff;
+    }
+}
+
+.group-wave {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    background: #161623;
+}
+
+.wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url("../img/wave.png");
+    background-size: 1000px 100px;
+    animation: AniWave 4s ease-in-out infinite;
+    animation-delay: calc(var(--i) * 0.25s);
+}
+
+.wave#wave1 {
+    z-index: 1000;
+    opacity: 1;
+    background-position-x: 400px;
+}
+.wave#wave2 {
+    z-index: 999;
+    opacity: 0.5;
+    background-position-x: 300px;
+}
+.wave#wave3 {
+    z-index: 998;
+    opacity: 0.2;
+    background-position-x: 200px;
+}
+.wave#wave4 {
+    z-index: 997;
+    opacity: 0.7;
+    background-position-x: 100px;
+}
+
+@keyframes AniWave {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {transform: translateY(15px);}
+}
+
+.circle-group {
+    height: 650px;
+    width: 100%;
+    position: relative;
+    background: linear-gradient(#111425, #3571e0);
+    background-attachment: fixed;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.circle-group i {
+    position: absolute;
+    background: #fff;
+    border-radius: 50%;
+    animation: AniStar linear infinite;
+}
+
+@keyframes AniStar {
+    0% {opacity: 0; transform: translateY(0);}
+    10%, 90% {opacity: 1;}
+    100% {transform: translateY(-100px);}
+}
+
+.bowl {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 300px;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    border: 4px solid rgba(255, 255, 255, 0.1);
+    /* backdrop-filter: blur(5px); */
+    transform-origin: bottom center;
+}
+
+.circle-moon {
+    position: absolute;
+    top: 35%;
+    left: 52%;
+    transform: translate(-50%, -50%);
+    width: 30px;
+    height: 30px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.15),
+                0 0 0 10px rgba(255, 255, 255, 0.1),
+                0 0 0 15px rgba(255, 255, 255, 0.05);
+}
+
+.circle-group img {
+    position: absolute;
+    top: 36%;
+    left: 43%;
+    transform: translate(-50%, -50%);
+    width: 80px;
+    transform: rotateY(180deg);
+}
+
+.clouds {
+    position: absolute;
+    top: 52%;
+    left: 50%;
+    overflow: hidden;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.clouds img{
+    position: absolute;
+    top: 14%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    animation: AniCloud 3s linear infinite;
+}
+
+@keyframes AniCloud {
+    0% {transform: translateX(300px);}
+    100% {transform: translateX(-300px);}
+}
+
+.clouds img:nth-child(2){
+    margin-left: 30px;
+}
+
+.water {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    overflow: hidden;
+    background: rgba(65, 193, 251, 0.5);
+    border-bottom-left-radius: 150px;
+    border-bottom-right-radius: 150px;
+    transform-origin: top center;
+    z-index: 2;
+    animation: AnimationWater 5s linear infinite;
+}
+
+.water span {
+    background: #fff;
+    border-radius: 50%;
+}
+
+@keyframes AnimationWater {
+    0% {transform: rotate(0deg);}
+    25% {transform: rotate(-10deg);}
+    50% {transform: rotate(0deg);}
+    75% {transform: rotate(10deg);}
+    100% {transform: rotate(0deg);}
+}
+
+.shadow {
+    position: absolute;
+    top: calc(50% + 150px);
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 30px;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+    border-radius: 50%;
+}
+
+.water:before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    border-radius: 50%;
+    background: #1fa4e0;
+}
+
+#style-2::-webkit-scrollbar-track
+{
+	box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	/* border-radius: 15px; */
+	background-color: #F5F5F5;
+}
+
+#style-2::-webkit-scrollbar
+{
+	width: 7px;
+	background-color: #F5F5F5;
+}
+
+#style-2::-webkit-scrollbar-thumb
+{
+	border-radius: 15px;
+	box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: rgba(0, 0, 0, 0.5);
+}

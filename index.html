@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Rancho&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Rancho&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body id="style-2">
+    <section class="header" id="header">
+        <div class="wrapper-header">
+            <ul id="group-header">
+                <li><a href="#" class="active" id="abc">Home</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Group</a></li>
+                <li><a href="#">Info</a></li>
+            </ul>
+        </div>
+    </section>
+ 
+    <section class="slider-list" id="slide">
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active slide-one">
+                  <div class="container">
+                      <div class="row">
+                        <div class="col-6">
+                            <h1>Build A Mobile App</h1>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum quos reiciendis expedita perspiciatis omnis incidunt magnam ducimus laboriosam eum. Voluptatum possimus ipsa velit ducimus dignissimos vitae, similique cupiditate quasi magni.</p>
+                            <button type="button">Read More</button>
+                        </div>
+                        <div class="col-6">
+                            <div class="img-box">
+                                <img src="./img/slider/pic-1.png" alt="" class="pic-one">
+                                <img src="./img/slider/pic-2.png" alt="" class="pic-2">
+                                <img src="./img/slider/pic-3.png" alt="" class="pic-3">
+                                <img src="./img/slider/pic-4.png" alt="" class="pic-4">
+                                <img src="./img/slider/pic-5.png" alt="" class="pic-5">
+                                <img src="./img/slider/pic-6.png" alt="" class="pic-6">
+                            </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="carousel-item slide-two">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-6">
+                                <h1>Learn Graghphics Design</h1>
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum quos reiciendis expedita perspiciatis omnis incidunt magnam ducimus laboriosam eum. Voluptatum possimus ipsa velit ducimus dignissimos vitae, similique cupiditate quasi magni.</p>
+                                <button type="button">Read More</button>
+                            </div>
+                            <div class="col-6">
+                                <div class="img-box">
+                                    <img src="./img/slider/img-1.png" alt="" class="img-one">
+                                    <img src="./img/slider/img-2.png" alt="" class="img-2">
+                                    <img src="./img/slider/img-3.png" alt="" class="img-3">
+                                    <img src="./img/slider/img-4.png" alt="" class="img-4">
+                                    <img src="./img/slider/img-5.png" alt="" class="img-5">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </section>
+
+    <section class="carousel-list" id="carousel">
+        <h2 id="text"><span>It's time for a new</span><br>Adventure</h2>
+        <img src="./img/header/bird1.png" id="bird1" alt="">
+        <img src="./img/header/bird2.png" id="bird2" alt="">
+        <img src="./img/header/forest.png" id="forest" alt="">
+        <img src="./img/header/rocks.png" id="rocks" alt="">
+        <img src="./img/header/water.png" id="water" alt="">
+    </section>
+
+    
+    <section class="group-ani">
+        <canvas id="canvas1"></canvas>
+        <!-- <div class="img-center"></div> --> 
+        <div class="count-time">
+            <div class="text" id="textInner">Happy new year</div>
+            <div class="countdown">
+                <div class="container-day">
+                    <h5 class="day">Time</h5>
+                    <h5>Day</h5>
+                </div>
+                <div class="container-hour">
+                    <h5 class="hour">Time</h5>
+                    <h5>Hour</h5>
+                </div>
+                <div class="container-minute">
+                    <h5 class="minute">Time</h5>
+                    <h5>Minute</h5>
+                </div>
+                <div class="container-second">
+                    <h5 class="second">Time</h5>
+                    <h5>Second</h5>
+                </div>
+            </div>
+        </div>
+        <div class="bubble"></div>
+        <div class="bubble1"></div>
+        <div class="list-video">
+            <div class="box-video">
+                <video src="./img/group/video/Pexels Videos 2063228.mp4" type="video/mp4" class="clip" loop></video>
+            </div>
+            <div class="box-video">
+                <video src="./img/group/video/video.mp4" class="clip" type="video/mp4" loop></video>
+            </div>
+        </div>
+    </section>
+<!-- 
+    <section class="group-footer">
+        <div class="box-video-1">
+            <video src="./img/group-1/Pexels Videos 1204902.mp4" type="video/mp4" loop autoplay></video>
+            <video src="./img/group-1/pexels-free-creative-stuff-5575180.mp4" type="video/mp4" loop autoplay></video>
+        </div>
+    </section> -->
+
+    <div class="form-3">
+        <div class="icon star1">
+            <svg height="100pt" viewBox="0 -10 511.99143 511" width="100pt" xmlns="http://www.w3.org/2000/svg"><path d="m510.652344 185.882812c-3.371094-10.367187-12.566406-17.707031-23.402344-18.6875l-147.796875-13.417968-58.410156-136.75c-4.3125-10.046875-14.125-16.53125-25.046875-16.53125s-20.738282 6.484375-25.023438 16.53125l-58.410156 136.75-147.820312 13.417968c-10.835938 1-20.011719 8.339844-23.402344 18.6875-3.371094 10.367188-.257813 21.738282 7.9375 28.925782l111.722656 97.964844-32.941406 145.085937c-2.410156 10.667969 1.730468 21.699219 10.582031 28.097656 4.757813 3.457031 10.347656 5.183594 15.957031 5.183594 4.820313 0 9.644532-1.28125 13.953125-3.859375l127.445313-76.203125 127.421875 76.203125c9.347656 5.585938 21.101562 5.074219 29.933593-1.324219 8.851563-6.398437 12.992188-17.429687 10.582032-28.097656l-32.941406-145.085937 111.722656-97.964844c8.191406-7.1875 11.308594-18.535156 7.9375-28.925782zm-252.203125 223.722657"/></svg>
+        </div>
+        
+        <div class="icon heart">
+            <svg viewBox="0 -28 512.00002 512" xmlns="http://www.w3.org/2000/svg"><path d="m471.382812 44.578125c-26.503906-28.746094-62.871093-44.578125-102.410156-44.578125-29.554687 0-56.621094 9.34375-80.449218 27.769531-12.023438 9.300781-22.917969 20.679688-32.523438 33.960938-9.601562-13.277344-20.5-24.660157-32.527344-33.960938-23.824218-18.425781-50.890625-27.769531-80.445312-27.769531-39.539063 0-75.910156 15.832031-102.414063 44.578125-26.1875 28.410156-40.613281 67.222656-40.613281 109.292969 0 43.300781 16.136719 82.9375 50.78125 124.742187 30.992188 37.394531 75.535156 75.355469 127.117188 119.3125 17.613281 15.011719 37.578124 32.027344 58.308593 50.152344 5.476563 4.796875 12.503907 7.4375 19.792969 7.4375 7.285156 0 14.316406-2.640625 19.785156-7.429687 20.730469-18.128907 40.707032-35.152344 58.328125-50.171876 51.574219-43.949218 96.117188-81.90625 127.109375-119.304687 34.644532-41.800781 50.777344-81.4375 50.777344-124.742187 0-42.066407-14.425781-80.878907-40.617188-109.289063zm0 0"/></svg>
+        </div>
+        <div class="icon square">
+            <svg id="Layer_1" enable-background="new 0 0 506.1 506.1" height="100" viewBox="0 0 506.1 506.1" width="100" xmlns="http://www.w3.org/2000/svg"><path d="m489.609 0h-473.118c-9.108 0-16.491 7.383-16.491 16.491v473.118c0 9.107 7.383 16.491 16.491 16.491h473.119c9.107 0 16.49-7.383 16.49-16.491v-473.118c0-9.108-7.383-16.491-16.491-16.491z"/></svg>
+        </div>
+    </div>
+
+    <section class="group-wave">
+        <div class="wave" id="wave1" style="--i:1;"></div>
+        <div class="wave" id="wave2" style="--i:2;"></div>
+        <div class="wave" id="wave3" style="--i:3;"></div>
+        <div class="wave" id="wave4" style="--i:4;"></div>
+    </section>
+
+    <!-- <section class="events">
+        <div class="form-1">
+            <div class="text" id="textInner">Clock</div>
+    </section> -->
+
+    <section class="circle-group" id="circle-group">
+        <div class="circle-moon"></div>
+        <div class="clouds">
+            <img src="./img/cloud.png" alt="">
+            <img src="./img/cloud.png" alt="">
+        </div>
+        <img src="./img/plane.png" alt="">
+        <div class="bowl">
+            <div class="water" id="water"></div>
+        </div>
+        <div class="shadow"></div>
+    </section>
+
+
+    <script src="./js/index.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+
+</body>
+</html>
